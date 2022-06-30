@@ -16,8 +16,12 @@ for (let i = 0; i < elemArr.length; i++ ){
 }
 
 
-// ;(function($){
-//     $('.nav-open-btn').on('click', function(){
+// Toggle navbar and overlay when click any navbar-link
+const navbarLinks = document.querySelectorAll('[data-navbar-link]');
 
-//     });
-// }(jQuery));
+for( let i = 0; i < navbarLinks.length; i++ ){
+    navbarLinks[i].addEventListener('click', function(){
+        navbar.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
+}
